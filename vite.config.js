@@ -22,7 +22,7 @@ export default defineConfig({
       lib: {
         entry: "src/components/TvSearch.vue",
         name: "TvSearch",
-        fileName: format => `todovue-search.${format}.js`,
+        fileName: format => `tv-search.${format}.js`,
         formats: ["es", "cjs"]
       },
       rollupOptions: {

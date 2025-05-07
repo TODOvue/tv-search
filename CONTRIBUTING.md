@@ -2,7 +2,7 @@
 Thank you for your interest in contributing to `TODOvue Search`! We welcome any bug reports, feature requests, or code contributions to improve the component for everyone.
 
 ## Reporting Bugs and Requesting Features
-If you encounter any bugs or have any feature requests, please submit an issue on the [GitHub repository](https://github.com/TODOvue/todovue-search/issues). When submitting an issue, please include the following information:
+If you encounter any bugs or have any feature requests, please submit an issue on the [GitHub repository](https://github.com/TODOvue/tv-search/issues). When submitting an issue, please include the following information:
 - Steps to reproduce the issue (if it's a bug)
 - Expected behavior
 - Actual behavior

@@ -71,6 +71,7 @@ export const demos = [
   {
     id: 1,
     title: "TvSearch Default",
+    description: "Displays the default TvSearch layout with a placeholder and a list of results. Uses default colors and layout.",
     propsData: {
       placeholder: "Type 'How'...",
       titleButton: "Search",
@@ -81,6 +82,7 @@ export const demos = [
   {
     id: 2,
     title: "TvSearch custom styles",
+    description: "Demonstrates how to override the default styles using the `customStyles` prop for input, button, and background colors.",
     propsData: {
       placeholder: "Type 'Blog'...",
       titleButton: "Search",

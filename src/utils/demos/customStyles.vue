@@ -10,7 +10,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import TvSearch from '@todovue/tvsearch';
+import TvSearch from '@todovue/tv-search';
 
 const customStyles = ref({
   bgBody: "#0A4539",

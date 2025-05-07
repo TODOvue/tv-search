@@ -1,6 +1,6 @@
 <script setup>
 import { defineAsyncComponent } from 'vue'
-import TvDemo from '@todovue/tvdemo'
+import TvDemo from '@todovue/tv-demo'
 import { demos } from "../utils/mocks.js";
 
 const TvSearch = defineAsyncComponent(() => import('../components/TvSearch.vue'))
@@ -12,9 +12,9 @@ const TvSearch = defineAsyncComponent(() => import('../components/TvSearch.vue')
     :component="TvSearch"
     :variants="demos"
     nameComponent="TvSearch"
-    npmInstall="@todovue/tvsearch"
-    sourceLink="https://github.com/TODOvue/todovue-search"
-    urlClone="https://github.com/TODOvue/todovue-search.git"
+    npmInstall="@todovue/tv-search"
+    sourceLink="https://github.com/TODOvue/tv-search"
+    urlClone="https://github.com/TODOvue/tv-search.git"
     version="1.0.0"
   ></tv-demo>
 </template>

@@ -2,40 +2,40 @@
 </p>
 
 # TODOvue Search
-###### TvSearch is a custom Search component for web applications.
+###### TvSearch provides a fast, accessible, and fully customizable search interface for Vue 3 apps.
 
-[![npm](https://img.shields.io/npm/v/@todovue/tvsearch.svg)](https://www.npmjs.com/package/@todovue/tvsearch) [![Netlify Status](https://api.netlify.com/api/v1/badges/c6992bf1-ed06-4d9b-8b77-752254880951/deploy-status)](https://app.netlify.com/sites/todovue-search/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tvsearch.svg)](https://www.npmjs.com/package/@todovue/tvsearch) [![npm](https://img.shields.io/npm/dt/@todovue/tvsearch.svg)](https://www.npmjs.com/package/@todovue/tvsearch) ![GitHub](https://img.shields.io/github/license/TODOvue/todovue-search) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/todovue-search)
+[![npm](https://img.shields.io/npm/v/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search) [![Netlify Status](https://api.netlify.com/api/v1/badges/c6992bf1-ed06-4d9b-8b77-752254880951/deploy-status)](https://app.netlify.com/sites/tv-search/deploys) [![npm](https://img.shields.io/npm/dm/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search) [![npm](https://img.shields.io/npm/dt/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search) ![GitHub](https://img.shields.io/github/license/TODOvue/tv-search) ![GitHub Release Date](https://img.shields.io/github/release-date/TODOvue/tv-search)
 
 ## Table of Contents
-- [Demo](https://todovue-search.netlify.app/)
+- [Demo](https://tv-search.netlify.app/)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Props](#props)
 - [Events](#events)
 - [Customize](#customize)
 - [Development](#development)
-- [Changelog](https://github.com/TODOvue/todovue-search/blob/main/CHANGELOG.md)
-- [Contributing](https://github.com/TODOvue/todovue-search/blob/main/CONTRIBUTING.md)
-- [License](https://github.com/TODOvue/todovue-search/search/main/LICENSE)
+- [Changelog](https://github.com/TODOvue/tv-search/blob/main/CHANGELOG.md)
+- [Contributing](https://github.com/TODOvue/tv-search/blob/main/CONTRIBUTING.md)
+- [License](https://github.com/TODOvue/tv-search/search/main/LICENSE)
 
 ## Installation
 Install with npm or yarn
 ```bash
-npm install @todovue/tvsearch
+npm install @todovue/tv-search
 ```
 ```bash
-yarn add @todovue/tvsearch
+yarn add @todovue/tv-search
 ```
 Import
 ```js
-import TvSearch from '@todovue/tvsearch'
+import TvSearch from '@todovue/tv-search'
 ```
 
 You can also import it directly in the **main.js** file, so you don't have to import it in the pages
 ```js
 import { createApp } from "vue";
 import App from "./App.vue";
-import TvSearch from '@todovue/tvsearch'
+import TvSearch from '@todovue/tv-search'
 
 const app = createApp(App);
 app.component("TvSearch", TvSearch);
@@ -55,7 +55,7 @@ You can open the search component with `Ctrl + k` or `Command + k`
 
 <script setup>
   import { ref } from 'vue';
-  import TvSearch from '@todovue/tvsearch';
+  import TvSearch from '@todovue/tv-search';
   
   const results = ref([
   {
@@ -135,7 +135,7 @@ const customStyles = {
 
 <script setup>
   import { ref } from 'vue';
-  import TvSearch from '@todovue/tvsearch';
+  import TvSearch from '@todovue/tv-search';
   
   const customStyles = ref({
   bgBody: "#0A4539",
@@ -181,10 +181,10 @@ const customStyles = {
 ## Development
 Clone the repository and install the dependencies
 ```bash
-git clone https://github.com/TODOvue/todovue-search.git
-cd todovue-search
+git clone https://github.com/TODOvue/tv-search.git
+cd tv-search
 yarn install
 ```
 ---
 ## License
-[MIT](https://github.com/TODOvue/todovue-search/blob/main/LICENSE)
+[MIT](https://github.com/TODOvue/tv-search/blob/main/LICENSE)

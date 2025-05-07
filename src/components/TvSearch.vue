@@ -1,5 +1,5 @@
 <script setup>
-import TvButton from "@todovue/tvbutton";
+import TvButton from "@todovue/tv-button";
 import useSearch from "../composable/useSearch.js";
 
 const props = defineProps({
@@ -59,7 +59,8 @@ const {
         />
         <tv-button
           runded
-          icon="search-light"
+          icon="search"
+          icon-position="left"
           @click="search"
           :class="{ 'tv-radius-none-br': filterResults.length >= 1 }"
           :customStyle="custom.customButton"

@@ -79,4 +79,6 @@ const {
   </div>
 </template>
 
-<style scoped lang="scss" src="../assets/scss/style.scss"></style>
+<style scoped lang="scss">
+  @use "../assets/scss/style.scss";
+</style>

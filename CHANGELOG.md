@@ -34,6 +34,6 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Easy integration into any Vue 3 application.
 - Published to [npm](https://www.npmjs.com/package/@todovue/tv-search) under the `@todovue` namespace.
 
-[1.0.2]: https://github.com/TODOvue/tv-button/pull/3/files
+[1.0.2]: https://github.com/TODOvue/tv-button/pull/4/files
 [1.0.1]: https://github.com/TODOvue/tv-button/pull/2/files
 [1.0.0]: https://github.com/TODOvue/tv-button/pull/2/files

@@ -20,7 +20,7 @@ export default defineConfig({
     }
     : {
       lib: {
-        entry: "src/components/TvSearch.vue",
+        entry: "src/entry.ts",
         name: "TvSearch",
         fileName: format => `tv-search.${format}.js`,
         formats: ["es", "cjs"]
@@ -30,7 +30,8 @@ export default defineConfig({
         output: {
           globals: {
             vue: "Vue"
-          }
+          },
+          exports: 'named'
         }
       }
     },

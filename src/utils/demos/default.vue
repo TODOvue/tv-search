@@ -9,7 +9,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import TvSearch from '@todovue/tv-search';
+import { TvSearch } from '@todovue/tv-search';
 
 const results = ref([
   {

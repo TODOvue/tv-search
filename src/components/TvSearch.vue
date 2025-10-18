@@ -1,5 +1,5 @@
 <script setup>
-import TvButton from "@todovue/tv-button";
+import { TvButton } from "@todovue/tv-button";
 import useSearch from "../composable/useSearch.js";
 
 const props = defineProps({
@@ -79,6 +79,4 @@ const {
   </div>
 </template>
 
-<style scoped lang="scss">
-  @use "../assets/scss/style.scss";
-</style>
+<style scoped lang="scss" src="../assets/scss/style.scss"></style>

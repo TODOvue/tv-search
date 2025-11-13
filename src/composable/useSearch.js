@@ -19,14 +19,29 @@ const useSearch = (props, emit) => {
   };
   
   const search = (selectedResult = null) => {
+    if (selectedResult && (selectedResult instanceof Event || (selectedResult?.target && selectedResult?.preventDefault))) {
+      selectedResult = null;
+    }
+
     if (!inputValue.value.trim() && !selectedResult) return;
-    const resultToEmit = selectedResult || filterResults.value[0];
     
-    if (resultToEmit) {
-      emit("search", resultToEmit);
+    if (selectedResult) {
+      emit("search", selectedResult);
       _manageModal(false);
       inputValue.value = "";
+      return;
     }
+    
+    if (filterResults.value.length > 0) {
+      emit("search", filterResults.value[0]);
+      _manageModal(false);
+      inputValue.value = "";
+      return;
+    }
+    
+    emit("search", inputValue.value.trim());
+    _manageModal(false);
+    inputValue.value = "";
   };
   
   const closeModal = () => {

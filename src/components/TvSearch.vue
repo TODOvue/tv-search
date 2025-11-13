@@ -51,7 +51,7 @@ const {
         <input
           type="text"
           v-model="inputValue"
-          @keyup.enter="search"
+          @keyup.enter="search()"
           :placeholder="placeholder"
           class="tv-search-input"
           :class="{ 'tv-radius-none-bl': filterResults.length >= 1 }"
@@ -61,7 +61,7 @@ const {
           runded
           icon="search"
           icon-position="left"
-          @click="search"
+          @click="search()"
           :class="{ 'tv-radius-none-br': filterResults.length >= 1 }"
           :customStyle="custom.customButton"
         >
@@ -70,7 +70,7 @@ const {
       </div>
       <div class="tv-search-results" v-if="filterResults.length >= 1">
         <template v-for="result in filterResults" :key="result.id">
-          <p class="tv-search-results-title tv-cursor-pointer" @click="search">
+          <p class="tv-search-results-title tv-cursor-pointer" @click="search(result)">
             {{ result.title }}
           </p>
         </template>

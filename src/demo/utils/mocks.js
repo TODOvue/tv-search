@@ -1,6 +1,10 @@
 import Default from "./demos/default.vue?raw";
 import CustomStyles from "./demos/customStyles.vue?raw";
 
+const handleSearch = (event) => {
+  console.log("Search executed:", event);
+}
+
 const results = [
   {
     id: 1,
@@ -76,6 +80,7 @@ export const demos = [
       placeholder: "Type 'How'...",
       titleButton: "Search",
       results: resultHow,
+      onSearch: handleSearch,
     },
     html: Default,
   },
@@ -93,6 +98,7 @@ export const demos = [
         bgButton: "#80286e",
         colorButton: "#d7c9c9",
       },
+      onSearch: handleSearch,
     },
     html: CustomStyles,
   },

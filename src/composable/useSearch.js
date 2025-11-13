@@ -18,11 +18,15 @@ const useSearch = (props, emit) => {
     _focusInput();
   };
   
-  const search = () => {
-    if (!inputValue.value.trim()) return;
-    emit("search", inputValue.value.trim());
-    _manageModal(false);
-    inputValue.value = "";
+  const search = (selectedResult = null) => {
+    if (!inputValue.value.trim() && !selectedResult) return;
+    const resultToEmit = selectedResult || filterResults.value[0];
+    
+    if (resultToEmit) {
+      emit("search", resultToEmit);
+      _manageModal(false);
+      inputValue.value = "";
+    }
   };
   
   const closeModal = () => {

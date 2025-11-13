@@ -70,7 +70,7 @@ const {
       </div>
       <div class="tv-search-results" v-if="filterResults.length >= 1">
         <template v-for="result in filterResults" :key="result.id">
-          <p class="tv-search-results-title tv-cursor-pointer" @click="search">
+          <p class="tv-search-results-title tv-cursor-pointer" @click="search(result)">
             {{ result.title }}
           </p>
         </template>

@@ -4,9 +4,18 @@
 # TODOvue Search (TvSearch)
 A fast, accessible, and fully customizable search interface component for Vue 3 applications. Provides an elegant modal search experience with keyboard shortcuts, real-time filtering, and complete style customization. Works seamlessly in Single Page Apps or Server-Side Rendered (SSR) environments (e.g. Nuxt 3).
 
-[![npm](https://img.shields.io/npm/v/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search) [![Netlify Status](https://api.netlify.com/api/v1/badges/c6992bf1-ed06-4d9b-8b77-752254880951/deploy-status)](https://app.netlify.com/sites/tv-search/deploys) [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search) [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search) ![License](https://img.shields.io/github/license/TODOvue/tv-search) ![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-search)
+[![npm](https://img.shields.io/npm/v/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c6992bf1-ed06-4d9b-8b77-752254880951/deploy-status)](https://app.netlify.com/projects/tv-search-demo/deploys)
+[![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search)
+[![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search)
+![License](https://img.shields.io/github/license/TODOvue/tv-search)
+![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-search)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@todovue/tv-search)
+![Node Version](https://img.shields.io/node/v/@todovue/tv-search)
+![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-search)
+![Stars](https://img.shields.io/github/stars/TODOvue/tv-search?style=social)
 
-> Demo: https://tv-search.netlify.app/
+> Demo: https://tv-search-demo.netlify.app/
 
 ---
 ## Table of Contents
@@ -352,7 +361,9 @@ const results = [
 - **Event listeners**: Keyboard event listeners are registered in `onMounted` and cleaned up in `onBeforeUnmount`
 - **Client-side only**: Keyboard shortcuts require browser environment; use `.client.ts` plugin in Nuxt
 - **Icons**: SVG icons are loaded via Vite's `import.meta.glob`, which works in both SPA and SSR builds
-- **No manual CSS import required**: Styles are automatically injected via `vite-plugin-css-injected-by-js`
+- **CSS Import**: Starting from version 1.0.4, styles are served as a separate CSS file (`dist/tv-search.css`) and must be explicitly imported:
+  - For Vue/Vite SPA: `import '@todovue/tv-search/style.css'` in `main.ts`
+  - For Nuxt 3/4: Add `'@todovue/tv-search/style.css'` to the `css` array in `nuxt.config.ts`
 
 ---
 ## Roadmap

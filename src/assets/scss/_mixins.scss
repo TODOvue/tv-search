@@ -1,8 +1,3 @@
 @mixin defaultIcon($icon) {
   background-image: url($icon);
 }
-
-@mixin fontFamilyAndFontSize($font-family, $font-size) {
-  font-family: $font-family;
-  font-size: $font-size;
-}

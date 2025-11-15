@@ -1,20 +1,6 @@
 @use "mixins";
 @use "variables";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  @include mixins.fontFamilyAndFontSize(variables.$font-text, 1rem);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  @include mixins.fontFamilyAndFontSize(variables.$font-title, 2rem);
-}
-
 .tv-cursor-pointer {
   cursor: pointer;
 }

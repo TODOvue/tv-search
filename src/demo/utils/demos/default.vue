@@ -11,6 +11,7 @@
 <script setup>
 import { ref } from 'vue';
 import { TvSearch } from '@todovue/tv-search';
+import '@todovue/tv-search/style.css';
 
 const results = ref([
   {

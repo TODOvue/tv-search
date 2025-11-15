@@ -1,20 +1,19 @@
 @use "variables";
 @use "mixins";
 @use "global";
+@import "@todovue/tv-button/style.css";
 
-.dark-mode {
-  & .tv-search {
-    &-icon {
-      border: 2px solid variables.$light-card-bg;
-    }
+.tv-search {
+  &-icon {
+    border: 2px solid variables.$light-card-bg;
   }
-  & .tv-search-modal {
-    background-color: rgba(variables.$dark-card-bg, 0.9);
+}
+.tv-search-modal {
+  background-color: rgba(variables.$dark-card-bg, 0.9);
 
-    & .tv-search-modal-content {
-      background-color: variables.$light-card-bg;
-      box-shadow: 0 0 15px 0 variables.$light-card-bg;
-    }
+  & .tv-search-modal-content {
+    background-color: variables.$light-card-bg;
+    box-shadow: 0 0 15px 0 variables.$light-card-bg;
   }
 }
 

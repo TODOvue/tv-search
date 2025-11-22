@@ -12,6 +12,7 @@
 import { ref } from 'vue';
 import { TvSearch } from '@todovue/tv-search';
 import '@todovue/tv-search/style.css';
+import '@todovue/tv-button/style.css';
 
 const results = ref([
   {

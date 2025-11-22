@@ -6,14 +6,14 @@ const TvSearch = defineAsyncComponent(() => import('../components/TvSearch.vue')
 </script>
 
 <template>
-  <tv-demo
+  <TvDemo
     :component="TvSearch"
     :variants="demos"
-    nameComponent="TvSearch"
-    npmInstall="@todovue/tv-search"
-    sourceLink="https://github.com/TODOvue/tv-search"
-    urlClone="https://github.com/TODOvue/tv-search.git"
-    version="1.0.5"
+    component-name="TvSearch"
+    npm-install="@todovue/tv-search"
+    source-link="https://github.com/TODOvue/tv-search"
+    url-clone="https://github.com/TODOvue/tv-search.git"
+    version="1.1.0"
   />
 </template>
 <style scoped>

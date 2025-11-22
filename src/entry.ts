@@ -1,16 +1,21 @@
-import TvSearch from './components/TvSearch.vue'
+import type { App, Plugin } from 'vue'
+import _TvSearch from './components/TvSearch.vue'
 import './style.scss'
 
-(TvSearch as any).install = (app: any) => {
+const TvSearch = _TvSearch as typeof _TvSearch & Plugin;
+TvSearch.install = (app: App) => {
   app.component('TvSearch', TvSearch)
 };
 
-export const TvSearchPlugin = {
-  install(app: any) {
-    app.component('TvSearch', TvSearch)
+export { TvSearch }
+
+export const TvSearchPlugin: Plugin = {
+  install: TvSearch.install
+};
+export default TvSearch;
+
+declare module 'vue' {
+  export interface GlobalComponents {
+    TvSearch: typeof TvSearch;
   }
 }
-
-
-export { TvSearch }
-export default TvSearch

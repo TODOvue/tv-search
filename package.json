@@ -30,7 +30,8 @@
       "import": "./dist/tv-search.es.js",
       "require": "./dist/tv-search.cjs.js"
     },
-    "./style.css": "./dist/tv-search.css"
+    "./style.css": "./dist/tv-search.css",
+    "./nuxt": "./nuxt.js"
   },
   "sideEffects": [
     "*.css",
@@ -43,7 +44,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "nuxt.js"
   ],
   "engines": {
     "node": ">=20.19.0"
@@ -51,16 +53,16 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:demo": "cp README.md public/ && VITE_BUILD_TARGET=demo vite build"
+    "build:demo": "cp README.md public/ && cp CHANGELOG.md public/ && VITE_BUILD_TARGET=demo vite build"
   },
   "peerDependencies": {
     "vue": "^3.0.0"
   },
   "dependencies": {
-    "@todovue/tv-button": "^1.0.0"
+    "@todovue/tv-button": "^1.2.2"
   },
   "devDependencies": {
-    "@todovue/tv-demo": "^1.0.0",
+    "@todovue/tv-demo": "^1.2.1",
     "@vitejs/plugin-vue": "^6.0.0",
     "sass": "^1.0.0",
     "vite": "^7.0.0",

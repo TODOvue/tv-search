@@ -1,4 +1,4 @@
-<p align="center"><img width="150" src="https://firebasestorage.googleapis.com/v0/b/todovue-blog.appspot.com/o/logo.png?alt=media&token=d8eb592f-e4a9-4b02-8aff-62d337745f41" alt="TODOvue logo">
+<p align="center"><img width="150" src="https://res.cloudinary.com/dcdfhi8qz/image/upload/v1763663056/uqqtkgp1lg3xdplutpga.png" alt="TODOvue logo">
 </p>
 
 # TODOvue Search (TvSearch)
@@ -72,21 +72,12 @@ Global registration (main.js / main.ts):
 import { createApp } from 'vue'
 import App from './App.vue'
 import { TvSearch } from '@todovue/tv-search'
+import '@todovue/tv-search/style.css' // import styles
+import '@todovue/tv-button/style.css' // import styles
 
 createApp(App)
   .use(TvSearch) // enables <TvSearch /> globally
   .mount('#app')
-```
-
-Alternatively, register as a component:
-```js
-import { createApp } from 'vue'
-import App from './App.vue'
-import { TvSearch } from '@todovue/tv-search'
-
-const app = createApp(App)
-app.component('TvSearch', TvSearch)
-app.mount('#app')
 ```
 
 Local import inside a component:
@@ -94,6 +85,8 @@ Local import inside a component:
 <script setup>
 import { ref } from 'vue'
 import { TvSearch } from '@todovue/tv-search'
+import '@todovue/tv-search/style.css' // import styles
+import '@todovue/tv-button/style.css' // import styles
 
 const results = ref([
   {
@@ -136,21 +129,11 @@ function handleSearch(query) {
 ## Nuxt 3 / SSR Usage
 Create a plugin file: `plugins/tv-search.client.ts` (client-only is recommended since it uses keyboard events):
 ```ts
-import { defineNuxtPlugin } from '#app'
-import { TvSearch } from '@todovue/tv-search'
-
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.component('TvSearch', TvSearch)
-})
-```
-
-Or use the plugin install method:
-```ts
-import { defineNuxtPlugin } from '#app'
-import { TvSearch } from '@todovue/tv-search'
-
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.use(TvSearch)
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    '@todovue/tv-search/nuxt'
+  ]
 })
 ```
 

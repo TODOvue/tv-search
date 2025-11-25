@@ -4,6 +4,15 @@ All notable changes to `@todovue/tv-search` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.1] - 2025-11-24
+
+### Changed
+- Updated background and text colors for dark and light themes to improve readability and visual comfort.
+- Deleted unused styles files.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.2.2` to ensure compatibility with the latest changes.
+
 ## [1.1.0] - 2025-11-21
 
 ### Added
@@ -77,6 +86,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Easy integration into any Vue 3 application.
 - Published to [npm](https://www.npmjs.com/package/@todovue/tv-search) under the `@todovue` namespace.
 
+[1.1.1]: https://github.com/TODOvue/tv-button/pull/9/files
 [1.1.0]: https://github.com/TODOvue/tv-button/pull/8/files
 [1.0.5]: https://github.com/TODOvue/tv-button/pull/7/files
 [1.0.4]: https://github.com/TODOvue/tv-button/pull/6/files

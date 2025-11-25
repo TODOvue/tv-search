@@ -9,11 +9,12 @@ const TvSearch = defineAsyncComponent(() => import('../components/TvSearch.vue')
   <TvDemo
     :component="TvSearch"
     :variants="demos"
+    hide-background
     component-name="TvSearch"
     npm-install="@todovue/tv-search"
     source-link="https://github.com/TODOvue/tv-search"
     url-clone="https://github.com/TODOvue/tv-search.git"
-    version="1.1.0"
+    version="1.1.1"
   />
 </template>
 <style scoped>

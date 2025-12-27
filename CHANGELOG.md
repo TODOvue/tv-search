@@ -4,6 +4,22 @@ All notable changes to `@todovue/tv-search` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.2] - 2025-12-27
+
+### Added
+- Added automatic publishing to the TODOvue cPanel in `release.yml` for each release, simplifying package distribution and updates.
+- Added `package-lock.json` to the repository to ensure dependency consistency and facilitate version management across development and production environments.
+
+### Changed
+- Changed the `base` option in `vite.config.js` for website deployment in cpanel.
+
+### Fixed
+- Fixed repository URL in `package.json` to point to the correct GitHub repository.
+- Fixed the token configuration used to generate the package in the GitHub Actions workflow `release.yml`.
+
+### Dependencies
+- Updated dependency versions in `package.json` to maintain compatibility and benefit from improvements and bug fixes in the used libraries.
+
 ## [1.1.1] - 2025-11-24
 
 ### Changed
@@ -86,6 +102,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Easy integration into any Vue 3 application.
 - Published to [npm](https://www.npmjs.com/package/@todovue/tv-search) under the `@todovue` namespace.
 
+[1.1.2]: https://github.com/TODOvue/tv-button/pull/10/files
 [1.1.1]: https://github.com/TODOvue/tv-button/pull/9/files
 [1.1.0]: https://github.com/TODOvue/tv-button/pull/8/files
 [1.0.5]: https://github.com/TODOvue/tv-button/pull/7/files

@@ -5,7 +5,6 @@
 A fast, accessible, and fully customizable search interface component for Vue 3 applications. Provides an elegant modal search experience with keyboard shortcuts, real-time filtering, and complete style customization. Works seamlessly in Single Page Apps or Server-Side Rendered (SSR) environments (e.g. Nuxt 3).
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c6992bf1-ed06-4d9b-8b77-752254880951/deploy-status)](https://app.netlify.com/projects/tv-search-demo/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-search.svg)](https://www.npmjs.com/package/@todovue/tv-search)
 ![License](https://img.shields.io/github/license/TODOvue/tv-search)
@@ -15,7 +14,7 @@ A fast, accessible, and fully customizable search interface component for Vue 3 
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-search)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-search?style=social)
 
-> Demo: https://tv-search-demo.netlify.app/
+> Demo: https://ui.todovue.blog/search
 
 ---
 ## Table of Contents

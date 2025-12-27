@@ -14,7 +14,7 @@ const TvSearch = defineAsyncComponent(() => import('../components/TvSearch.vue')
     npm-install="@todovue/tv-search"
     source-link="https://github.com/TODOvue/tv-search"
     url-clone="https://github.com/TODOvue/tv-search.git"
-    version="1.1.1"
+    version="1.1.2"
   />
 </template>
 <style scoped>

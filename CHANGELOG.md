@@ -4,6 +4,11 @@ All notable changes to `@todovue/tv-search` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [1.1.3] - 2025-12-27
+
+### Fixed
+- Fixed publish in npm with new token.
+
 ## [1.1.2] - 2025-12-27
 
 ### Added
@@ -102,6 +107,7 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Easy integration into any Vue 3 application.
 - Published to [npm](https://www.npmjs.com/package/@todovue/tv-search) under the `@todovue` namespace.
 
+[1.1.3]: https://github.com/TODOvue/tv-button/pull/11/files
 [1.1.2]: https://github.com/TODOvue/tv-button/pull/10/files
 [1.1.1]: https://github.com/TODOvue/tv-button/pull/9/files
 [1.1.0]: https://github.com/TODOvue/tv-button/pull/8/files

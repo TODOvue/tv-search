@@ -6,6 +6,14 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-01-20
+
+### Added
+- Added `searchKeys` prop to allow searching by multiple object properties (default is `['title']`).
+- Added `noResultsText` prop for customizable empty state text (default: "No results found for").
+- Added scoped `item` slot for customizing search result rendering.
+- Added `no-results` slot for customizing the empty state.
+
 ### Dependencies
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
 - Updated the `@todovue/tv-button` dependency to `^1.2.4`.

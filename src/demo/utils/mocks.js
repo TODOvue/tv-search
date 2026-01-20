@@ -1,5 +1,8 @@
 import Default from "./demos/default.vue?raw";
 import CustomStyles from "./demos/customStyles.vue?raw";
+import Slots from "./demos/slots.vue?raw";
+import CustomKeys from "./demos/customKeys.vue?raw";
+import CustomNoResults from "./demos/customNoResults.vue?raw";
 
 const handleSearch = (event) => {
   console.log("Search executed:", event);
@@ -101,5 +104,79 @@ export const demos = [
       onSearch: handleSearch,
     },
     html: CustomStyles,
+  },
+  {
+    id: 3,
+    title: "TvSearch Slots",
+    description: "Demonstrates how to use the `item` slot to customize result rendering and the `no-results` slot for empty states.",
+    propsData: {
+      placeholder: "Search with slots...",
+      titleButton: "Search",
+      results: [
+        {
+          id: 1,
+          title: "Vue 3",
+          description: "The progressive JavaScript framework",
+        },
+        {
+          id: 2,
+          title: "Vite",
+          description: "Next Generation Frontend Tooling",
+        },
+      ],
+      onSearch: handleSearch,
+    },
+    html: Slots,
+  },
+  {
+    id: 4,
+    title: "TvSearch Custom Keys",
+    description: "Demonstrates how to use the `searchKeys` prop to search within multiple fields (e.g., matching text in 'description').",
+    propsData: {
+      placeholder: "Search by description...",
+      titleButton: "Search",
+      results: [
+        {
+          id: 1,
+          title: "Vue 3",
+          description: "The progressive JavaScript framework",
+        },
+        {
+          id: 2,
+          title: "Vite",
+          description: "Next Generation Frontend Tooling",
+        },
+        {
+          id: 3,
+          title: "Pinia",
+          description: "The Vue Store that you will enjoy using",
+        },
+      ],
+      searchKeys: ['title', 'description'],
+      onSearch: handleSearch,
+    },
+    html: CustomKeys,
+  },
+  {
+    id: 5,
+    title: "TvSearch Custom No Results",
+    description: "Demonstrates how to use the `noResultsText` prop to customize the 'No results found' message.",
+    propsData: {
+      placeholder: "Type something random...",
+      titleButton: "Search",
+      results: [
+        {
+          id: 1,
+          title: "Vue 3",
+        },
+        {
+          id: 2,
+          title: "Vite",
+        },
+      ],
+      noResultsText: "Sorry, we couldn't find any matches for",
+      onSearch: handleSearch,
+    },
+    html: CustomNoResults,
   },
 ];

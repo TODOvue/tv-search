@@ -16,12 +16,11 @@ A fast, accessible, and fully customizable search interface component for Vue 3 
 
 > Demo: https://ui.todovue.blog/search
 
----
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
 - [Quick Start (SPA)](#quick-start-spa)
-- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Nuxt 4 / SSR Usage](#nuxt-4--ssr-usage)
 - [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Events](#events)
@@ -30,13 +29,11 @@ A fast, accessible, and fully customizable search interface component for Vue 3 
 - [Results Data Structure](#results-data-structure)
 - [Accessibility](#accessibility)
 - [SSR Notes](#ssr-notes)
-- [Roadmap](#roadmap)
 - [Development](#development)
 - [Contributing](#contributing)
 - [Changelog](#changelog)
 - [License](#license)
 
----
 ## Features
 - **Keyboard-first UX**: Open with `Ctrl+K` / `Cmd+K`, close with `Esc`
 - **Real-time filtering**: Search as you type with instant results
@@ -45,11 +42,10 @@ A fast, accessible, and fully customizable search interface component for Vue 3 
 - **Accessible**: Built with semantic HTML and keyboard navigation
 - **Lightweight**: Minimal dependencies, Vue 3 marked as peer dependency
 - **SSR compatible**: Works in Nuxt 3 and other SSR frameworks
-- **Auto-focus**: Input field receives focus automatically when opened
+- **Autofocus**: Input field receives focus automatically when opened
 - **Click-away close**: Modal closes when clicking outside the content area
 - **Flexible results**: Pass any array of searchable items with custom properties
 
----
 ## Installation
 Using npm:
 ```bash
@@ -64,7 +60,6 @@ Using pnpm:
 pnpm add @todovue/tv-search
 ```
 
----
 ## Quick Start (SPA)
 Global registration (main.js / main.ts):
 ```js
@@ -124,8 +119,7 @@ function handleSearch(query) {
 </template>
 ```
 
----
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 Create a plugin file: `plugins/tv-search.client.ts` (client-only is recommended since it uses keyboard events):
 ```ts
 // nuxt.config.ts
@@ -165,7 +159,6 @@ import { TvSearch } from '@todovue/tv-search'
 </script>
 ```
 
----
 ## Component Registration Options
 | Approach                                             | When to use                                        |
 |------------------------------------------------------|----------------------------------------------------|
@@ -174,14 +167,15 @@ import { TvSearch } from '@todovue/tv-search'
 | Local named import `import TvSearch from '...'`      | Single page usage / code splitting                 |
 | Nuxt plugin `.client.ts`                             | SSR apps with client-side interactions             |
 
----
 ## Props
-| Prop         | Type   | Default | Description                                                                           | Required |
-|--------------|--------|---------|---------------------------------------------------------------------------------------|----------|
-| placeholder  | String | `""`    | Placeholder text for the search input field                                           | `true`   |
-| titleButton  | String | `""`    | Text displayed on the search button                                                   | `true`   |
-| results      | Array  | `[]`    | Array of searchable items (see [Results Data Structure](#results-data-structure))     | `true`   |
-| customStyles | Object | `{}`    | Custom color scheme for theming (see [Customization](#customization-styles--theming)) | `false`  |
+| Prop          | Type   | Default                  | Description                                                                           | Required |
+|---------------|--------|--------------------------|---------------------------------------------------------------------------------------|----------|
+| placeholder   | String | `""`                     | Placeholder text for the search input field                                           | `true`   |
+| titleButton   | String | `""`                     | Text displayed on the search button                                                   | `true`   |
+| results       | Array  | `[]`                     | Array of searchable items (see [Results Data Structure](#results-data-structure))     | `true`   |
+| customStyles  | Object | `{}`                     | Custom color scheme for theming (see [Customization](#customization-styles--theming)) | `false`  |
+| searchKeys    | Array  | `['title']`              | Array of keys in result objects to search against                                     | `false`  |
+| noResultsText | String | `"No results found for"` | Text to display when no results match the query                                       | `false`  |
 
 ### customStyles Object
 Customize the appearance by passing a `customStyles` object with any of these properties:
@@ -193,11 +187,10 @@ Customize the appearance by passing a `customStyles` object with any of these pr
 | bgButton    | String | `"#EF233C"` | Background color of the search button                    |
 | colorButton | String | `"#F4FAFF"` | Text color of the search button                          |
 
----
 ## Events
-| Event  | Payload Type | Description                                                                                     |
-|--------|--------------|-------------------------------------------------------------------------------------------------|
-| search | String       | Emitted when search is triggered (Enter key or button click). Returns the trimmed search query. |
+| Event  | Payload Type    | Description                                                                                     |
+|--------|-----------------|-------------------------------------------------------------------------------------------------|
+| search | String / Object | Emitted when search is triggered (Enter key or button click). Returns the trimmed search query. |
 
 Example:
 ```vue
@@ -216,7 +209,33 @@ function handleSearch(query) {
 </script>
 ```
 
----
+## Slots
+| Slot Name  | Props        | Description                                       |
+|------------|--------------|---------------------------------------------------|
+| item       | `{ result }` | Custom rendering for each result item in the list |
+| no-results | -            | Custom content when no results are found          |
+
+### Custom Slot Example
+```vue
+<tv-search
+  :results="items"
+  :searchKeys="['title', 'description']"
+>
+  <template #item="{ result }">
+    <div class="my-custom-item">
+      <h3>{{ result.title }}</h3>
+      <p>{{ result.description }}</p>
+    </div>
+  </template>
+  
+  <template #no-results>
+    <div class="empty-state">
+      <p>No matches found.</p>
+    </div>
+  </template>
+</tv-search>
+```
+
 ## Keyboard Shortcuts
 | Shortcut               | Action                            |
 |------------------------|-----------------------------------|
@@ -225,7 +244,6 @@ function handleSearch(query) {
 | `Enter`                | Execute search with current input |
 | Click outside modal    | Close the search modal            |
 
----
 ## Customization (Styles / Theming)
 You can override the default color scheme by passing a `customStyles` object:
 
@@ -288,7 +306,6 @@ const brandTheme = {
 }
 ```
 
----
 ## Results Data Structure
 The `results` prop expects an array of objects with the following structure:
 
@@ -324,7 +341,6 @@ const results = [
 
 **Note**: The component currently filters results based on the `title` property matching the user input (case-insensitive). You can handle the `@search` event to implement custom search logic or navigation.
 
----
 ## Accessibility
 - **Keyboard navigation**: Full support for `Ctrl+K`/`Cmd+K` to open, `Esc` to close, and `Enter` to search
 - **Focus management**: Input automatically receives focus when modal opens and is selected for immediate typing
@@ -337,7 +353,6 @@ const results = [
 - Ensure sufficient color contrast when using `customStyles`
 - Consider adding `aria-label` attributes for screen reader support in future versions
 
----
 ## SSR Notes
 - **Safe for SSR**: No direct DOM access (`window` / `document`) during module initialization
 - **Event listeners**: Keyboard event listeners are registered in `onMounted` and cleaned up in `onBeforeUnmount`
@@ -347,25 +362,6 @@ const results = [
   - For Vue/Vite SPA: `import '@todovue/tv-search/style.css'` in `main.ts`
   - For Nuxt 3/4: Add `'@todovue/tv-search/style.css'` to the `css` array in `nuxt.config.ts`
 
----
-## Roadmap
-| Feature                                  | Status      |
-|------------------------------------------|-------------|
-| Support for result `url` navigation      | Planned     |
-| Display `description` in results         | Planned     |
-| Customizable search icon                 | Planned     |
-| Multiple keyboard shortcut options       | Considering |
-| Result categorization / grouping         | Considering |
-| Highlight matching text in results       | Considering |
-| Recent searches history                  | Considering |
-| Loading state indicator                  | Considering |
-| Pagination for large result sets         | Considering |
-| Fuzzy search / advanced filtering        | Considering |
-| Theming via CSS variables                | Considering |
-| TypeScript type definitions improvement  | Planned     |
-| ARIA attributes enhancement              | Planned     |
-
----
 ## Development
 Clone the repository and install dependencies:
 ```bash
@@ -391,7 +387,6 @@ yarn build:demo
 
 The demo is served from Vite using `index.html` + `src/demo` examples.
 
----
 ## Contributing
 Contributions are welcome! Please read our [Contributing Guidelines](https://github.com/TODOvue/tv-search/blob/main/CONTRIBUTING.md) and [Code of Conduct](https://github.com/TODOvue/tv-search/blob/main/CODE_OF_CONDUCT.md) before submitting PRs.
 
@@ -402,14 +397,11 @@ Contributions are welcome! Please read our [Contributing Guidelines](https://git
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
----
 ## Changelog
 See [CHANGELOG.md](https://github.com/TODOvue/tv-search/blob/main/CHANGELOG.md) for release history and version changes.
 
----
 ## License
 [MIT](https://github.com/TODOvue/tv-search/blob/main/LICENSE) © TODOvue
 
----
 ### Attributions
 Crafted for the TODOvue component ecosystem

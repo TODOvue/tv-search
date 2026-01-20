@@ -73,9 +73,15 @@ const useSearch = (props, emit) => {
 
   const filterResults = computed(() => {
     if (inputValue.value.length < 1) return [];
-    return props.results?.filter((result) =>
-      result.title.toLowerCase().includes(inputValue.value.toLowerCase())
-    ) || [];
+    const searchKeys = props.searchKeys || ["title"];
+    const query = inputValue.value.toLowerCase();
+
+    return props.results?.filter((result) => {
+      return searchKeys.some((key) => {
+        const value = result[key];
+        return value && String(value).toLowerCase().includes(query);
+      });
+    }) || [];
   });
 
   const _convertHexToRgb = (hex) => {

@@ -19,6 +19,14 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  searchKeys: {
+    type: Array,
+    default: () => ["title"],
+  },
+  noResultsText: {
+    type: String,
+    default: "No results found for",
+  },
 })
 
 const emits = defineEmits(["search"]);
@@ -70,10 +78,19 @@ const {
       </div>
       <div class="tv-search-results" v-if="filterResults.length >= 1">
         <template v-for="result in filterResults" :key="result.id">
-          <p class="tv-search-results-title tv-cursor-pointer" @click="search(result)">
-            {{ result.title }}
-          </p>
+          <div @click="search(result)" class="tv-cursor-pointer">
+            <slot name="item" :result="result">
+              <p class="tv-search-results-title">
+                {{ result.title }}
+              </p>
+            </slot>
+          </div>
         </template>
+      </div>
+      <div v-else-if="inputValue" class="tv-search-no-results">
+        <slot name="no-results">
+          <p>{{ noResultsText }} "{{ inputValue }}"</p>
+        </slot>
       </div>
     </div>
   </div>

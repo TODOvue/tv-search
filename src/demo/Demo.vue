@@ -9,6 +9,7 @@ const TvSearch = defineAsyncComponent(() => import('../components/TvSearch.vue')
   <TvDemo
     :component="TvSearch"
     :variants="demos"
+    :manual-emits="['search']"
     hide-background
     component-name="TvSearch"
     npm-install="@todovue/tv-search"

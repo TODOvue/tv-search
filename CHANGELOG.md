@@ -4,6 +4,22 @@ All notable changes to `@todovue/tv-search` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+## [1.2.0] - 2026-01-20
+
+### Added
+- Added `searchKeys` prop to allow searching by multiple object properties (default is `['title']`).
+- Added `noResultsText` prop for customizable empty state text (default: "No results found for").
+- Added scoped `item` slot for customizing search result rendering.
+- Added `no-results` slot for customizing the empty state.
+
+### Dependencies
+- Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
+- Updated the `@todovue/tv-button` dependency to `^1.2.4`.
+- Updated the `sass` dependency to `^1.97.2`.
+- Updated the `vite` dependency to `^7.3.1`.
+
 ## [1.1.3] - 2025-12-27
 
 ### Fixed

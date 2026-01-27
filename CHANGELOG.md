@@ -4,7 +4,25 @@ All notable changes to `@todovue/tv-search` will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.2.1] - 2026-01-27
+
+### Changed
+- Simplified the file list in `package.json` to include only essential assets.
+- Simplified the build configuration by removing demo-specific logic.
+- Enhanced GitHub Actions workflows to automate npm package publishing and GitHub release creation.
+- Moved the `@todovue/tv-demo` component import from main.js to `Demo.vue` to localize its usage.
+- Updated build commands to include `README.md` and `CHANGELOG.md` files in the public directory during the build process.
+
+### Added
+- Included the `src` directory in the `package.json` files list to ensure component source files are bundled in the package distribution.
+
+### Removed
+- Eliminated the global import of the `@todovue/tv-demo` component from `main.js`.
+
+### Dependencies
+- Updated `@todovue/tv-demo` to `^1.4.11`.
+- Updated `vue` to `^3.5.27`.
+- Updated `sass` to `^1.97.3`.
 
 ## [1.2.0] - 2026-01-20
 
@@ -123,6 +141,8 @@ This project adheres to [Semantic Versioning](https://semver.org/).
 - Easy integration into any Vue 3 application.
 - Published to [npm](https://www.npmjs.com/package/@todovue/tv-search) under the `@todovue` namespace.
 
+[1.2.1]: https://github.com/TODOvue/tv-button/pull/13/files
+[1.2.0]: https://github.com/TODOvue/tv-button/pull/12/files
 [1.1.3]: https://github.com/TODOvue/tv-button/pull/11/files
 [1.1.2]: https://github.com/TODOvue/tv-button/pull/10/files
 [1.1.1]: https://github.com/TODOvue/tv-button/pull/9/files

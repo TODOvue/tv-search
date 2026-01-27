@@ -4,7 +4,7 @@
   "author": "Cristhian Daza",
   "description": "TvSearch provides a fast, accessible, and fully customizable search interface for Vue 3 apps.",
   "license": "MIT",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "homepage": "https://ui.todovue.blog/search",
   "repository": {
